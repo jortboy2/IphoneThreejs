@@ -11,7 +11,7 @@ export function Iphone15lightblue(props) {
     }
     })
   return (
-    <group {...props} dispose={null} scale={0.05} ref={meshRef}>
+    <group {...props} dispose={null} scale={0.1} ref={meshRef}>
       <group position={[0.01, 0, 5.385]} rotation={[-Math.PI / 2, 0, 0]}>
         <mesh
           castShadow

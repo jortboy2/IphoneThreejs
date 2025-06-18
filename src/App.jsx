@@ -6,6 +6,7 @@ import Iphone15black from "./component/Iphone15black";
 import CanvasLoading from "./component/CanvasLoading";
 import Iphone15deepblue from "./component/Iphone15deepblue";
 import Iphone15lightblue from "./component/Iphone15lightblue";
+import Herocamera from "./component/Herocamera";
 function App() {
   const [selectedColor, setSelectedColor] = useState("midnight");
 
@@ -86,7 +87,9 @@ function App() {
             <Canvas className="w-full mx-auto" style={{ height: "500px" }} camera={{ position: [0, 0, 10], fov: 45 }}>
               <color attach="background" args={['#000000']} />
               <Suspense fallback={<CanvasLoading />}>
-                {phoneImages[selectedColor] || phoneImages.black}
+                <Herocamera>
+                  {phoneImages[selectedColor] || phoneImages.black}
+                </Herocamera>
                 
                 {/* Custom environment with backdrop */}
                 <Environment

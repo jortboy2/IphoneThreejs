@@ -12,7 +12,7 @@ function Iphone15black(props) {
     }
   });
   return (
-    <group {...props} dispose={null} ref={meshRef} scale={0.44}>
+    <group {...props} dispose={null} ref={meshRef} scale={0.9}>
       <group >
         <mesh
           castShadow

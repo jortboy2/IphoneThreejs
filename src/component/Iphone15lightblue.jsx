@@ -3,7 +3,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 export function Iphone15lightblue(props) {
-  const { nodes, materials } = useGLTF('IphoneThreejs/models/iphone15-lightblue.glb')
+  const { nodes, materials } = useGLTF('/models/iphone15-lightblue.glb')
     const meshRef = useRef()
     useFrame(() => {
     if (meshRef.current) {
@@ -262,5 +262,5 @@ export function Iphone15lightblue(props) {
   )
 }
 
-useGLTF.preload('IphoneThreejs/models/iphone15-lightblue.glb')
+useGLTF.preload('/models/iphone15-lightblue.glb')
 export default Iphone15lightblue;

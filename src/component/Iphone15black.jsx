@@ -553,6 +553,6 @@ function Iphone15black(props) {
   );
 }
 
-useGLTF.preload("/${import.meta.env.BASE_URL}models/iphone15-black.glb");
+useGLTF.preload(`${import.meta.env.BASE_URL}models/iphone15-black.glb`);
 
 export default Iphone15black;

@@ -4,7 +4,7 @@ import { useFrame } from "@react-three/fiber";
 
 function Iphone15deepblue(props) {
   const { nodes, materials } = useGLTF(
-    "${import.meta.env.BASE_URL}models/iphone15-deepblue.glb"
+    `${import.meta.env.BASE_URL}models/iphone15-deepblue.glb`
   );
   const meshRef = useRef();
   useFrame(() => {
@@ -13,7 +13,7 @@ function Iphone15deepblue(props) {
     }
   });
   return (
-    <group {...props} dispose={null} ref={meshRef} scale={0.1}>
+    <group {...props} dispose={null} ref={meshRef} scale={0.05}>
       <group position={[0.01, 0, 5.385]} rotation={[-Math.PI / 2, 0, 0]}>
         <mesh
           castShadow
@@ -270,6 +270,6 @@ function Iphone15deepblue(props) {
   );
 }
 
-useGLTF.preload("${import.meta.env.BASE_URL}models/iphone15-deepblue.glb");
+useGLTF.preload(`${import.meta.env.BASE_URL}models/iphone15-deepblue.glb`);
 
 export default Iphone15deepblue;

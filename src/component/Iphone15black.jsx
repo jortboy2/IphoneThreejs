@@ -2,7 +2,7 @@ import React from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 function Iphone15black(props) {
-  const { nodes, materials } = useGLTF("/models/iphone15-black.glb");
+  const { nodes, materials } = useGLTF(`${import.meta.env.BASE_URL}models/iphone15-black.glb`);
   const meshRef = React.useRef();
   useFrame(() => {
     // You can add any animation logic here if needed
@@ -553,6 +553,6 @@ function Iphone15black(props) {
   );
 }
 
-useGLTF.preload("/models/iphone15-black.glb");
+useGLTF.preload("/${import.meta.env.BASE_URL}models/iphone15-black.glb");
 
 export default Iphone15black;

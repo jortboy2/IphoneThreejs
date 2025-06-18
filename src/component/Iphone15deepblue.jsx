@@ -4,7 +4,7 @@ import { useFrame } from "@react-three/fiber";
 
 function Iphone15deepblue(props) {
   const { nodes, materials } = useGLTF(
-    "../../public/models/iphone15-deepblue.glb"
+    "/models/iphone15-deepblue.glb"
   );
   const meshRef = useRef();
   useFrame(() => {
@@ -270,6 +270,6 @@ function Iphone15deepblue(props) {
   );
 }
 
-useGLTF.preload("../../public/models/iphone15-deepblue.glb");
+useGLTF.preload("/models/iphone15-deepblue.glb");
 
 export default Iphone15deepblue;
